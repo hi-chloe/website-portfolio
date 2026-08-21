@@ -396,6 +396,7 @@
   .ladder p + p{margin-top:11px}
   .ladder p b{display:inline;font-size:inherit;margin:0}
   .ladder.lessons li:last-child .k{color:var(--accent)}
+  .ladder.lessons p{max-width:none}
 
   pre{background:#fff;border:1px solid var(--rule);border-radius:var(--r-card);
     padding:18px 20px;overflow-x:auto;font-family:"JetBrains Mono",monospace;
