@@ -33,8 +33,8 @@ export default function Meridian() {
       <div><dt>Role</dt><dd>Product strategy, UX, interaction and visual design</dd></div>
       <div><dt>Scope</dt><dd><b>7 screens</b> incl. edge states, light and dark · <b>23-component</b> system</dd></div>
       <div><dt>Domain</dt><dd>Multi-location hospitality operations</dd></div>
-      <div><dt>Status</dt><dd>Self-directed build, <b>not user tested</b>. The problems it
-      works through are from client work I can't show</dd></div>
+      <div><dt>Status</dt><dd><b>Non-anonymized copy shipped</b>. The problems you see here are a
+      reflection of the client work I can't show</dd></div>
     </dl>
 
     <figure>
