@@ -466,6 +466,7 @@
 .glyph{display:inline-block;font-family:var(--display);
   font-variation-settings:"wght" 600;will-change:transform,color}
 .glyph.space{width:.26em}
+.glyph.dot{color:var(--accent)}
 
 
 /* ---------- home blocks ---------- */

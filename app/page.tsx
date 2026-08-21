@@ -14,7 +14,7 @@ export default function Home() {
 <header className="hero-home" id="top">
   <div className="hero-row">
     <div className="lockup-wrap">
-      <HeroLockup lines={["hi, i'm", "chloe"]} />
+      <HeroLockup lines={["hi, i'm", "chloe."]} />
     </div>
     <div className="portrait">
       <img src="/assets/chloe-portrait.webp" alt="Chloe Polk" width="1200" height="1200" fetchPriority="high" />

@@ -88,7 +88,9 @@ export function HeroLockup({ lines }: { lines: string[] }) {
       glyphs.forEach((g, i) => {
         const p = pose[i % pose.length];
         g.style.transform = `translateY(${(p * 2.2).toFixed(1)}px) rotate(${p.toFixed(2)}deg)`;
-        g.style.color = mix(INK, CFG.accent, 0.22 + (i % 4) * 0.07);
+        if (!g.classList.contains("dot")) {
+          g.style.color = mix(INK, CFG.accent, 0.22 + (i % 4) * 0.07);
+        }
       });
       fit();
       document.fonts?.ready.then(fit);
@@ -162,7 +164,9 @@ export function HeroLockup({ lines }: { lines: string[] }) {
           const swayR = Math.sin(t * 0.9 + s.ph * 1.3) * 0.35;
           g.style.transform =
             `translate3d(${s.x.toFixed(2)}px,${(s.y + swayY).toFixed(2)}px,0) rotate(${(s.r + swayR).toFixed(2)}deg)`;
-          g.style.color = mix(INK, CFG.accent, clamp(1 - d / CFG.radius, 0, 1) * CFG.intensity);
+          if (!g.classList.contains("dot")) {
+            g.style.color = mix(INK, CFG.accent, clamp(1 - d / CFG.radius, 0, 1) * CFG.intensity);
+          }
         });
       }
       raf = requestAnimationFrame(frame);
@@ -183,11 +187,14 @@ export function HeroLockup({ lines }: { lines: string[] }) {
     <h1 className="stage" ref={stage} aria-label={lines.join(" ")}>
       {lines.map((line, li) => (
         <span className="line" key={li} aria-hidden>
-          {[...line].map((ch, ci) => (
-            <span className={`glyph${ch === " " ? " space" : ""}`} key={ci}>
-              {ch === " " ? " " : ch}
-            </span>
-          ))}
+          {[...line].map((ch, ci) => {
+            const kind = ch === " " ? " space" : ch === "." ? " dot" : "";
+            return (
+              <span className={`glyph${kind}`} key={ci}>
+                {ch === " " ? " " : ch}
+              </span>
+            );
+          })}
         </span>
       ))}
     </h1>
