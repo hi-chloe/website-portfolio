@@ -36,11 +36,11 @@ export default function Typeshelf() {
 
     <figure>
       <div className="shot">
-        <img src="/assets/typeshelf-library.webp" alt="Typeshelf with a font folder loaded and sorted into Serif, Sans-serif and Monospace, previewing DejaVu Serif at 48px" width="1920" height="916" loading="eager" />
+        <img src="/assets/typeshelf-library.webp" alt="Typeshelf with installed fonts loaded, Unbounded favorited and previewing at 48px with a 14.7:1 AAA contrast readout" width="1919" height="914" loading="eager" />
       </div>
-      <figcaption>A folder of fonts, read and sorted into categories without being asked. The variant
-      chips list only the weights that were really there: DejaVu Serif loaded a Book, an
-      Italic and a Bold, so that is what you get.</figcaption>
+      <figcaption>Installed fonts, sorted into categories without being asked. Unbounded landed
+      in Favorites; the variant chip shows Regular only, because that is the weight that was
+      actually there.</figcaption>
     </figure>
   </header>
 
@@ -82,7 +82,7 @@ export default function Typeshelf() {
 
     <figure>
       <div className="shot">
-        <img src="/assets/typeshelf-empty.webp" alt="Typeshelf's empty state: a drop zone, a Load 3 sample fonts button, and an empty library panel" width="1920" height="916" loading="lazy" />
+        <img src="/assets/typeshelf-empty.webp" alt="Typeshelf's empty state: a drop zone, a Load 3 sample fonts button, and an empty library panel" width="1918" height="916" loading="lazy" />
       </div>
       <figcaption>The zero state has to answer "what do I do now" with no library to show. A drop
       target for files you already have, and three bundled fonts for anyone who just wants
@@ -151,10 +151,11 @@ export default function Typeshelf() {
     </div>
     <figure>
       <div className="shot">
-        <img src="/assets/typeshelf-picker.webp" alt="The specimen color picker open, showing presets, an HSV field, hex, RGB and CMYK inputs, and a live contrast ratio of 15.2:1 AAA" width="1440" height="900" loading="lazy" />
+        <img src="/assets/typeshelf-picker.webp" alt="The specimen color picker open on Text, showing presets, an HSV field, hex RGB and CMYK inputs, and a live contrast ratio of 3.2:1 AA Large" width="1915" height="912" loading="lazy" />
       </div>
       <figcaption>The specimen colors carry a live contrast ratio. You're picking type against a
-      real background, so the app tells you what that pairing actually scores.</figcaption>
+      real background, so the app tells you what that pairing actually scores, including when
+      it drops below AAA.</figcaption>
     </figure>
   </section>
 

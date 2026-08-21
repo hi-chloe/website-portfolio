@@ -39,7 +39,7 @@ export default function Meridian() {
 
     <figure>
       <div className="shot">
-        <img src="/assets/meridian-hero.webp" alt="Meridian Control Tower overview screen" width="1160" height="825" loading="eager" />
+        <img src="/assets/meridian-hero.webp" alt="Meridian Control Tower overview screen" width="1160" height="844" loading="eager" />
       </div>
     </figure>
   </header>
@@ -191,7 +191,7 @@ export default function Meridian() {
     Covers at risk, revenue at risk.</p>
     <figure>
       <div className="shot">
-        <img src="/assets/meridian-control-tower.webp" alt="Control Tower: regional overview with priority incidents and approvals queue" width="1137" height="806" loading="lazy" />
+        <img src="/assets/meridian-control-tower.webp" alt="Control Tower: regional overview with priority incidents and approvals queue" width="1137" height="820" loading="lazy" />
       </div>
     </figure>
     <div className="notes">
@@ -212,7 +212,7 @@ export default function Meridian() {
     you to act until the situation's been explained in words you could repeat to your own boss.</p>
     <figure>
       <div className="shot">
-        <img src="/assets/meridian-incident.webp" alt="Incident Workspace: plain-language summary, contributing signals, evidence and recommended response" width="1137" height="1263" loading="lazy" />
+        <img src="/assets/meridian-incident.webp" alt="Incident Workspace: plain-language summary, contributing signals, evidence and recommended response" width="1137" height="1271" loading="lazy" />
       </div>
     </figure>
     <div className="notes">
@@ -233,7 +233,7 @@ export default function Meridian() {
     costs, what you can undo, and how long you have to decide.</p>
     <figure>
       <div className="shot">
-        <img src="/assets/meridian-recommendation.webp" alt="Recommendation Review: four proposed actions, alternatives considered, expected effect and decision record" width="1137" height="1128" loading="lazy" />
+        <img src="/assets/meridian-recommendation.webp" alt="Recommendation Review: four proposed actions, alternatives considered, expected effect and decision record" width="1137" height="1138" loading="lazy" />
       </div>
     </figure>
     <div className="notes">
@@ -255,7 +255,7 @@ export default function Meridian() {
     accept them.</p>
     <figure>
       <div className="shot">
-        <img src="/assets/meridian-outcome.webp" alt="Outcome and Learning: predicted vs actual, decision record, and proposed model changes" width="1137" height="954" loading="lazy" />
+        <img src="/assets/meridian-outcome.webp" alt="Outcome and Learning: predicted vs actual, decision record, and proposed model changes" width="1137" height="966" loading="lazy" />
       </div>
     </figure>
 
@@ -295,7 +295,7 @@ export default function Meridian() {
       threshold so you're not left wondering whether it's broken.</p>
       <figure>
         <div className="shot narrow">
-          <img src="/assets/meridian-edge-allclear.webp" alt="All-clear zero state" width="647" height="418" loading="lazy" />
+          <img src="/assets/meridian-edge-allclear.webp" alt="All-clear zero state" width="647" height="411" loading="lazy" />
         </div>
       </figure>
     </div>
@@ -306,7 +306,7 @@ export default function Meridian() {
       lists the three things that would change its mind, and offers to hand it to a person.</p>
       <figure>
         <div className="shot narrow">
-          <img src="/assets/meridian-edge-lowconfidence.webp" alt="Low-confidence state where Meridian declines to recommend" width="647" height="418" loading="lazy" />
+          <img src="/assets/meridian-edge-lowconfidence.webp" alt="Low-confidence state where Meridian declines to recommend" width="647" height="411" loading="lazy" />
         </div>
         <figcaption>Revenue at risk reads <b>Withheld · Not modeled</b>. A range this wide would just be
         a guess.</figcaption>
@@ -320,7 +320,7 @@ export default function Meridian() {
       second re-check.</p>
       <figure>
         <div className="shot narrow">
-          <img src="/assets/meridian-edge-rejected.webp" alt="Rejected approval state with recorded rationale" width="647" height="418" loading="lazy" />
+          <img src="/assets/meridian-edge-rejected.webp" alt="Rejected approval state with recorded rationale" width="647" height="411" loading="lazy" />
         </div>
       </figure>
     </div>
@@ -388,7 +388,7 @@ export default function Meridian() {
     <figure>
       <div className="theme-pair">
         <div className="shot">
-          <img src="/assets/meridian-theme-light.webp" alt="Meridian components in light mode" width="1143" height="1005" loading="lazy" />
+          <img src="/assets/meridian-theme-light.webp" alt="Meridian components in light mode" width="1112" height="969" loading="lazy" />
         </div>
         <div className="shot">
           <img src="/assets/meridian-theme-dark.webp" alt="The same components in dark mode" width="1143" height="1005" loading="lazy" />

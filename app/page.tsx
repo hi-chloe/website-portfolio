@@ -127,7 +127,7 @@ export default function Home() {
     <aside className="cv">
       <h3>Experience</h3>
       <div className="cv-item">
-        <span><span className="cv-role">UI/UX &amp; Product Development</span>
+        <span><span className="cv-role">UI/UX &amp; Product Development, Sales &amp; Marketing</span>
         <span className="cv-org">Prosera, Inc.</span></span>
         <span className="cv-when">2025 &rarr; now</span>
       </div>
@@ -137,7 +137,7 @@ export default function Home() {
         <span className="cv-when">2024 – 25</span>
       </div>
       <div className="cv-item">
-        <span><span className="cv-role">Team Lead, Social &amp; Creative Production</span>
+        <span><span className="cv-role">Ecommerce Operations &amp; Livestream Sales Lead</span>
         <span className="cv-org">Going Twice, Inc.</span></span>
         <span className="cv-when">2021 – 24</span>
       </div>
@@ -165,7 +165,6 @@ export default function Home() {
       <CopyEmail address="chloe@hichloe.me" />
     </div>
     <div className="contact-meta">
-      <span>Open to product design roles, and to freelance.</span>
       <a href="https://www.linkedin.com/in/chloe-polk" target="_blank" rel="noopener noreferrer" data-cursor="Open">LinkedIn</a>
       <a href="/chloe-polk-resume.pdf" target="_blank" rel="noopener" data-cursor="Open">Résumé (PDF)</a>
     </div>
