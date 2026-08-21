@@ -17,7 +17,7 @@ export default function Home() {
       <HeroLockup lines={["hi, i'm", "chloe"]} />
     </div>
     <div className="portrait">
-      <img src="/assets/chloe-portrait.webp" alt="Chloe Polk" width="440" height="440" fetchPriority="high" />
+      <img src="/assets/chloe-portrait.webp" alt="Chloe Polk" width="880" height="880" fetchPriority="high" />
     </div>
   </div>
   <p className="sub">I design the interface layer for enterprise AI products: the part that decides
