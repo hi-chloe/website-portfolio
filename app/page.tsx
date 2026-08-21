@@ -34,9 +34,9 @@ export default function Home() {
     <span className="row-num">01</span>
     <span className="row-copy">
       <span className="row-title">Meridian, hospitality operations</span>
-      <span className="row-desc">An AI decision-support system for multi-location operators. I built the
-      whole spine: signal, incident, impact, recommendation, decision, action, outcome. That includes
-      the state where Meridian doesn't have enough to go on and says so.</span>
+      <span className="row-desc">Anonymized client work. An AI decision-support system for multi-location
+      operators. I built the whole spine: signal, incident, impact, recommendation, decision, action,
+      outcome — including the state where Meridian doesn't have enough to go on and says so.</span>
       <span className="row-stats">
         <span><b>23</b> components</span>
         <span><b>63</b> variants</span>
@@ -46,6 +46,7 @@ export default function Home() {
       </span>
     </span>
     <span className="tags">
+      <span className="tag">Client work</span>
       <span className="tag">Design systems</span>
       <span className="tag">AI &amp; agents</span>
       <span className="tag">Product</span>

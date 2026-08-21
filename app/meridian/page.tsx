@@ -5,11 +5,11 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 export const metadata: Metadata = {
   title: "Meridian, hospitality operations · Chloe Polk",
   description:
-    "An AI decision-support system for multi-location hospitality operations. Case study by Chloe Polk.",
+    "An AI decision-support system for multi-location hospitality operations. Anonymized client work. Case study by Chloe Polk.",
   openGraph: {
     title: "Meridian, hospitality operations · Chloe Polk",
     description:
-      "An AI decision-support system for multi-location hospitality operations. Case study by Chloe Polk.",
+      "An AI decision-support system for multi-location hospitality operations. Anonymized client work. Case study by Chloe Polk.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "hi, i'm chloe" }],
   },
 };
@@ -33,9 +33,14 @@ export default function Meridian() {
       <div><dt>Role</dt><dd>Product strategy, UX, interaction and visual design</dd></div>
       <div><dt>Scope</dt><dd><b>7 screens</b> incl. edge states, light and dark · <b>23-component</b> system</dd></div>
       <div><dt>Domain</dt><dd>Multi-location hospitality operations</dd></div>
-      <div><dt>Status</dt><dd><b>Non-anonymized copy shipped</b>. The problems you see here are a
-      reflection of the client work I can't show</dd></div>
+      <div><dt>Basis</dt><dd><b>Anonymized client work</b>. A real engagement, recast into a
+      different industry with every identifier and figure replaced</dd></div>
     </dl>
+
+    <p className="prov">This case study comes out of real client work. The engagement is under NDA,
+    so the whole system has been recast into a different industry, and every name, figure, and data
+    point on this page has been replaced. The problems, the constraints, and the design decisions
+    are real. The particulars are not.</p>
 
     <figure>
       <div className="shot own-frame">
@@ -419,7 +424,8 @@ export default function Meridian() {
       <div>
         <h4>Known limitations</h4>
         <ul>
-          <li>The scenario data is constructed. No model has been trained behind it yet.</li>
+          <li>Every figure on this page is constructed for the write-up, not client data. No model
+          has been trained behind it yet.</li>
           <li>Only the approver's path is designed so far. The GM's mobile view is still open.</li>
           <li>Contrast is verified across every screen. Keyboard and screen reader flows still need a pass.</li>
         </ul>

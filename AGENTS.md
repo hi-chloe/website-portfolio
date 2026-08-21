@@ -71,12 +71,14 @@ and an 8s failsafe because IntersectionObserver samples and can skip elements on
 a fast scroll, and a skipped element would stay invisible forever. Don't remove
 those nets.
 
-**Meridian discloses once.** The Status field in its meta block says a
-non-anonymized copy shipped, and that the problems on the page reflect client
-work Chloe can't show. One limitations bullet says the scenario data is
-constructed. That's the floor. The numbers in that case study are invented, so
-removing those would be showing fabricated outcomes to employers. Everything
-else reads as a real product case study on purpose.
+**Meridian discloses once, as anonymized client work.** The Basis field in its
+meta block, plus the `.prov` note under it, say this is a real engagement recast
+into a different industry with every identifier and figure replaced. One
+limitations bullet says every figure is constructed for the write-up. That's the
+floor. The numbers in that case study are invented, so removing those would be
+showing fabricated outcomes to employers. Everything else reads as a real
+product case study on purpose. Never name the original industry. "A different
+industry" is the most that goes on a public page.
 
 ## Writing copy
 

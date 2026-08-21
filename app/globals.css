@@ -146,6 +146,9 @@
 
   .meta dd b{color:var(--ink);font-weight:500}
 
+  .prov{margin-top:24px;padding-left:16px;border-left:2px solid var(--accent);
+    font-size:14.5px;line-height:1.62;color:var(--ink-60);max-width:var(--measure)}
+
 
   /* ---------- figures ---------- */
   figure{margin:38px 0 0}
