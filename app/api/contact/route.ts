@@ -80,9 +80,9 @@ export async function POST(req: Request) {
   }
 
   const key = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO;
-  if (!key || !to) {
-    console.error("contact: RESEND_API_KEY or CONTACT_TO is not set");
+  const to = process.env.CONTACT_TO || "chloe@hichloe.me";
+  if (!key) {
+    console.error("contact: RESEND_API_KEY is not set");
     return NextResponse.json(
       { error: "The form isn't wired up yet. Email chloe@hichloe.me directly." },
       { status: 500 },
