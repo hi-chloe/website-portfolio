@@ -151,9 +151,9 @@
   figure{margin:38px 0 0}
 
   .shot{position:relative;width:100%;max-width:1160px;margin-inline:auto;
-    border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow)}
-  /* the 2x Meridian exports are JPEG, so no alpha to carry a drop shadow.
-     Bleed was cropped off; the frame lives here instead. */
+    box-shadow:var(--shadow)}
+  /* Screens are flush crops. A radius plus overflow:hidden clipped the top of
+     the chrome, so the frame is a shadow only. */
   .theme-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px);
     margin-top:38px;align-items:start}
   .theme-pair .shot{max-width:none;margin-inline:0}
@@ -161,9 +161,7 @@
 
   .shot.narrow{max-width:860px;margin-inline:0}
 
-  /* the Figma exports carry their own rounded frame + drop shadow in the alpha
-     channel, so the container adds no border, background or shadow of its own */
-  .shot img{display:block;width:100%;height:auto}
+  .shot img{display:block;width:100%;max-width:100%;height:auto}
 
   .shot.missing{border:1px solid var(--rule);border-radius:var(--r-card);background:var(--paper-2)}
 
@@ -722,7 +720,6 @@
 
   .ladder li{grid-template-columns:40px 1fr;gap:12px;padding:16px}
   .meta div,.stats div,.note,.challenges > div{padding:16px}
-  .shot{border-radius:12px}
 
   .mailto,.contact .btn.primary{width:100%;justify-content:center}
   .contact h2{max-width:12ch}

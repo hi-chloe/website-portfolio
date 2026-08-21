@@ -7,3 +7,8 @@ next-env.d.ts
 .env*
 CURSOR-FIXES.md
 MERIDIAN-REVISION.md
+
+.vercel
+.env*.local
+tmp-shots/
+tmp-meridian-*.webp
