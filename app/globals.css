@@ -152,8 +152,8 @@
 
   .shot{position:relative;width:100%;max-width:1160px;margin-inline:auto;
     border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow)}
-  /* Frame is CSS. Assets keep 16–24px of canvas above the chrome so the radius
-     clips padding, not the logo. */
+  /* Same frame as Typeshelf: radius + shadow. Assets carry ~28px of chrome
+     padding above the logo so the radius clips pad, not the brand. */
   .theme-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px);
     margin-top:38px;align-items:start}
   .theme-pair .shot{max-width:none;margin-inline:0}
