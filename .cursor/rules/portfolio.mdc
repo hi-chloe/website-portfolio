@@ -1,0 +1,20 @@
+---
+description: hichloe.me portfolio — locked design decisions and writing rules
+alwaysApply: true
+---
+
+Read `AGENTS.md` at the repo root before changing anything. It holds the full rules.
+
+The ones that get broken most:
+
+- No Tailwind, no CSS framework, no hex literals in components. Tokens live in
+  `app/globals.css`.
+- Accent tint caps at 60% (`#5B4BE8`). Above that it fails WCAG AA at 4.5:1.
+- `fit()` in `HeroLockup.tsx` measures the lockup and scales it. Don't swap it for a
+  CSS `clamp()`.
+- `prefers-reduced-motion` gets a designed still, not a freeze.
+- Never add a seniority claim anywhere on the site.
+- Meridian's body copy is Chloe's own writing. Don't rewrite it.
+
+Writing copy: contractions, second person, short declaratives, US spelling. Never the
+"X, not Y" construction. Never the words deliberately, genuinely, coherent, precisely.
