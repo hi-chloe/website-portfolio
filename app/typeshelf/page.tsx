@@ -209,7 +209,7 @@ export default function Typeshelf() {
 
     <figure>
       <div className="shot">
-        <img src="/assets/typeshelf-skiplink.webp" alt="The first Tab press revealing the skip link" width="1440" height="900" loading="lazy" />
+        <img src="/assets/typeshelf-skiplink.webp" alt="Typeshelf empty state: drop zone, Load 3 sample fonts button, and an empty library" width="1918" height="916" loading="lazy" />
       </div>
       <figcaption>First Tab. Distance to any region is now fixed at one, no matter how many fonts
       are loaded.</figcaption>
