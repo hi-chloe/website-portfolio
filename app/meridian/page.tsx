@@ -38,8 +38,8 @@ export default function Meridian() {
     </dl>
 
     <figure>
-      <div className="shot">
-        <img src="/assets/meridian-hero.webp" alt="Meridian Control Tower overview screen" width="1160" height="664" loading="eager" />
+      <div className="shot own-frame">
+        <img src="/assets/meridian-hero.webp" alt="Meridian Control Tower overview screen" width="2512" height="1842" loading="eager" />
       </div>
     </figure>
   </header>
@@ -190,8 +190,8 @@ export default function Meridian() {
     the situation in a sentence before any metric shows up. The numbers under it are consequences.
     Covers at risk, revenue at risk.</p>
     <figure>
-      <div className="shot">
-        <img src="/assets/meridian-control-tower.webp" alt="Control Tower: regional overview with priority incidents and approvals queue" width="1160" height="839" loading="lazy" />
+      <div className="shot own-frame">
+        <img src="/assets/meridian-control-tower.webp" alt="Control Tower: regional overview with priority incidents and approvals queue" width="2480" height="1810" loading="lazy" />
       </div>
     </figure>
     <div className="notes">
@@ -211,8 +211,8 @@ export default function Meridian() {
     <p className="lede">This screen leads with plain language, then evidence, then a proposal. Nothing asks
     you to act until the situation's been explained in words you could repeat to your own boss.</p>
     <figure>
-      <div className="shot">
-        <img src="/assets/meridian-incident.webp" alt="Incident Workspace: plain-language summary, contributing signals, evidence and recommended response" width="1160" height="1296" loading="lazy" />
+      <div className="shot own-frame">
+        <img src="/assets/meridian-incident.webp" alt="Incident Workspace: plain-language summary, contributing signals, evidence and recommended response" width="2480" height="2724" loading="lazy" />
       </div>
     </figure>
     <div className="notes">
@@ -232,8 +232,8 @@ export default function Meridian() {
     <p className="lede">This screen makes oversight mean something. It shows what you're authorizing, what it
     costs, what you can undo, and how long you have to decide.</p>
     <figure>
-      <div className="shot">
-        <img src="/assets/meridian-recommendation.webp" alt="Recommendation Review: four proposed actions, alternatives considered, expected effect and decision record" width="1160" height="1161" loading="lazy" />
+      <div className="shot own-frame">
+        <img src="/assets/meridian-recommendation.webp" alt="Recommendation Review: four proposed actions, alternatives considered, expected effect and decision record" width="2480" height="2454" loading="lazy" />
       </div>
     </figure>
     <div className="notes">
@@ -254,8 +254,8 @@ export default function Meridian() {
     reasoning attached to the record, and lets the system suggest its own fixes. You still have to
     accept them.</p>
     <figure>
-      <div className="shot">
-        <img src="/assets/meridian-outcome.webp" alt="Outcome and Learning: predicted vs actual, decision record, and proposed model changes" width="1160" height="987" loading="lazy" />
+      <div className="shot own-frame">
+        <img src="/assets/meridian-outcome.webp" alt="Outcome and Learning: predicted vs actual, decision record, and proposed model changes" width="2480" height="2106" loading="lazy" />
       </div>
     </figure>
 
@@ -294,8 +294,8 @@ export default function Meridian() {
       shows the eight systems still reporting and when each last checked, and offers to adjust the
       threshold so you're not left wondering whether it's broken.</p>
       <figure>
-        <div className="shot narrow">
-          <img src="/assets/meridian-edge-allclear.webp" alt="All-clear zero state" width="670" height="420" loading="lazy" />
+        <div className="shot own-frame narrow">
+          <img src="/assets/meridian-edge-allclear.webp" alt="All-clear zero state" width="1384" height="840" loading="lazy" />
         </div>
       </figure>
     </div>
@@ -305,8 +305,8 @@ export default function Meridian() {
       <p>Three weak signals at a venue with four weeks of history. Meridian holds back the impact number,
       lists the three things that would change its mind, and offers to hand it to a person.</p>
       <figure>
-        <div className="shot narrow">
-          <img src="/assets/meridian-edge-lowconfidence.webp" alt="Low-confidence state where Meridian declines to recommend" width="670" height="420" loading="lazy" />
+        <div className="shot own-frame narrow">
+          <img src="/assets/meridian-edge-lowconfidence.webp" alt="Low-confidence state where Meridian declines to recommend" width="1384" height="840" loading="lazy" />
         </div>
         <figcaption>Revenue at risk reads <b>Withheld · Not modeled</b>. A range this wide would just be
         a guess.</figcaption>
@@ -319,8 +319,8 @@ export default function Meridian() {
       marked, and the new constraint carries into whatever gets proposed next. No overtime without a
       second re-check.</p>
       <figure>
-        <div className="shot narrow">
-          <img src="/assets/meridian-edge-rejected.webp" alt="Rejected approval state with recorded rationale" width="670" height="420" loading="lazy" />
+        <div className="shot own-frame narrow">
+          <img src="/assets/meridian-edge-rejected.webp" alt="Rejected approval state with recorded rationale" width="1384" height="840" loading="lazy" />
         </div>
       </figure>
     </div>
@@ -387,11 +387,11 @@ export default function Meridian() {
     </dl>
     <figure>
       <div className="theme-pair">
-        <div className="shot">
-          <img src="/assets/meridian-theme-light.webp" alt="Meridian components in light mode" width="1143" height="1004" loading="lazy" />
+        <div className="shot own-frame">
+          <img src="/assets/meridian-theme-light.webp" alt="Meridian components in light mode" width="1143" height="1005" loading="lazy" />
         </div>
-        <div className="shot">
-          <img src="/assets/meridian-theme-dark.webp" alt="The same components in dark mode" width="1143" height="1004" loading="lazy" />
+        <div className="shot own-frame">
+          <img src="/assets/meridian-theme-dark.webp" alt="The same components in dark mode" width="1143" height="1005" loading="lazy" />
         </div>
       </div>
       <figcaption>The same components in both modes. Verified: 0 WCAG AA failures on every text

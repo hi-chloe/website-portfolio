@@ -46,10 +46,10 @@ The ceiling is `--lockup-max`.
 **`prefers-reduced-motion` gets a composed still, not a freeze.** Letters settle into
 varied rotations with a static tint. Test it before touching the hero.
 
-**`.shot` framing depends on the export format.** Current Meridian assets are JPEG
-(no alpha), so the bleed was cropped and the frame lives in CSS — radius, overflow
-hidden, shadow. If assets are ever re-exported as PNG the shadow rides in the alpha
-and all of that must come back out, or the frame doubles.
+**`.shot` framing depends on the export format.** Typeshelf stills are opaque, so
+`.shot` supplies radius, overflow clip, and shadow. Meridian stills are 2x PNGs
+with the radius and drop shadow in the alpha. Those figures use `.shot.own-frame`,
+which drops the CSS frame. Adding it back clips the chrome and doubles the shadow.
 
 **Tags in the work index are metadata, not filters.** Turn filtering on around six
 projects. A filter that returns "2 of 2" makes the roster look smaller.

@@ -152,8 +152,10 @@
 
   .shot{position:relative;width:100%;max-width:1160px;margin-inline:auto;
     border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow)}
-  /* Same frame as Typeshelf: radius + shadow. Assets carry ~28px of chrome
-     padding above the logo so the radius clips pad, not the brand. */
+  /* Typeshelf stills are opaque, so .shot supplies the radius and shadow.
+     Meridian 2x PNGs already carry both in the alpha. .own-frame drops the
+     CSS clip or it shaves the chrome and doubles the shadow. */
+  .shot.own-frame{border-radius:0;overflow:visible;box-shadow:none}
   .theme-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px);
     margin-top:38px;align-items:start}
   .theme-pair .shot{max-width:none;margin-inline:0}

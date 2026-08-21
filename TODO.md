@@ -44,19 +44,15 @@ Ordered by what a reviewer notices first.
 
 ## Meridian stills
 
-- [ ] **Re-export the hero frame from Figma.** The `meridian-hero.webp` that shipped in the
-      first commit was cropped 12px into the product logo at export time — the mark's top was
-      sliced and the "Overview" breadcrumb was cut in half. The current file is a stand-in
-      derived from `meridian-control-tower.webp`, which is the same Overview screen exported
-      cleanly, trimmed to the hero's 1.72:1 slot. **Worth deciding first:** since the two are
-      the same screen, a faithful re-export gives the page the same image twice. Leading with
-      the Incident Workspace or the low-confidence edge state may be the better call.
-- [ ] **Edge-state exports end mid-content.** `edge-allclear`, `edge-lowconfidence` and
-      `edge-rejected` are faithful to their Figma exports, but each stops partway through a
-      section ("Alternatives Meridian considered" is cut under its own subtitle). Re-export
-      those three at a section boundary.
-- Originals live in `tmp-shots/origs/`. Never crop `public/assets/` in place — restore from
-  there and re-derive.
+- Full-frame 2x PNG exports from Figma now ship as `public/assets/meridian-*.webp`
+  with alpha. Do not crop them to a Typeshelf-like viewport. `.shot.own-frame`
+  keeps the CSS radius from shaving the chrome.
+- [ ] **Rejected edge still ends mid-section in Figma.** `meridian-edge-rejected`
+      is the full export; "Alternatives Meridian considered" is already cut in
+      the frame. Re-export that one at a section boundary in
+      `QFFNEkI81GeyRBpkcoX6d6`.
+- Originals live in `tmp-shots/origs/`. Never crop `public/assets/` in place —
+  restore from there.
 
 
 ## Checks

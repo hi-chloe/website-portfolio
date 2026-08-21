@@ -63,8 +63,9 @@ display face doesn't break it. The ceiling is `--lockup-max`.
 varied rotations with a static tint. Check it before changing the hero.
 
 **The Meridian screens carry their own frame.** Their rounded corners and drop
-shadow live in the alpha channel, so `.shot` adds no border, background, shadow
-or overflow clip. Adding any doubles the frame.
+shadow live in the alpha channel, so `.shot.own-frame` adds no border, background,
+shadow or overflow clip. Adding any doubles the frame. Typeshelf stills stay
+opaque, so the shared `.shot` class still supplies that frame there.
 
 **Tags in the work index are metadata, not filters.** A filter that returns
 "2 of 2" makes the roster look smaller than just showing it. Turn filtering on
