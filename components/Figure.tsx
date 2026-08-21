@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 
 /**
- * The Meridian exports carry their own rounded frame and drop shadow in the
- * alpha channel, so the container adds no border, background or shadow of its
- * own. Adding any doubles the frame.
+ * The frame lives in CSS, not in the assets. `.shot` supplies the radius and
+ * shadow; the exports are opaque RGB and carry no frame of their own. Each
+ * Meridian still is padded with 28px of chrome-colored space at the top so the
+ * radius clips padding instead of the product logo.
  */
 export function Figure({
   src, alt, width, height, caption, narrow, priority,
