@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Cursor } from "@/components/Cursor";
 import { Reveal } from "@/components/Reveal";
 import "./globals.css";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Cursor />
         <Reveal />
         {children}
+        <Analytics />
       </body>
     </html>
   );
