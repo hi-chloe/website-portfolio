@@ -20,8 +20,8 @@ export default function Home() {
       <img src="/assets/chloe-portrait.webp" alt="Chloe Polk" width="1200" height="1200" fetchPriority="high" />
     </div>
   </div>
-  <p className="sub">I design the interface layer for enterprise AI products: the part that decides
-  whether someone who isn't an engineer can actually run the thing.</p>
+  <p className="sub">I've run Shopify and TikTok Shop merchant operations. Now I'm a technical product manager
+  and product designer building enterprise AI tools people can actually use.</p>
   <div className="hero-foot">
     <span className="scroll">Selected work ↓</span>
   </div>
@@ -85,10 +85,10 @@ export default function Home() {
         "@context": "https://schema.org",
         "@type": "Person",
         name: "Chloe Polk",
-        jobTitle: "UI/UX Product Specialist",
+        jobTitle: "Technical Product Manager - UI/UX Specialist",
         url: "https://hichloe.me",
         email: "mailto:chloe@hichloe.me",
-        address: { "@type": "PostalAddress", addressLocality: "Tacoma", addressRegion: "WA" },
+        address: { "@type": "PostalAddress", addressLocality: "St. Louis", addressRegion: "MO", addressCountry: "US" },
         sameAs: [
           "https://www.linkedin.com/in/chloe-polk",
           "https://github.com/hi-chloe",
@@ -97,38 +97,47 @@ export default function Home() {
       }),
     }}
   />
-  <div className="sec-head"><span>About</span><span className="count">Tacoma, WA</span></div>
+  <div className="sec-head"><span>About</span><span className="count">St. Louis, MO</span></div>
   <div className="about-grid">
     <div>
-      <p className="lead">I'm Chloe. I design the parts of AI products where a person has to decide
-      whether to trust the machine.</p>
+      <p className="lead">I came to product through the work of running a business: catalogs,
+      promotions, orders, and live sales. Now I build tools for people doing that work.</p>
 
-      <p>Right now that's at Prosera, where we build multi-agent AI systems for supply
-      chain teams. I own the redesign of the product interface: I design in Figma, build
-      features in Cursor alongside engineering, and tune how the agents behave and how
-      accurate their output is. I'm in the client meetings, and I present the prototypes
-      myself. I trained in prompt engineering under former Stanford AI faculty.</p>
+      <p>At Going Twice, I worked hands-on in Shopify and TikTok Shop Seller Center,
+      managing catalog and promotion work across 1,800+ products. When a listing, price, or
+      workflow caused trouble, I was one of the people who had to sort it out.</p>
 
-      <p>Before this I spent four years at a collectibles company that grew from 8 people to 50+,
-      running creative production and hosting live broadcasts. Before that, operations and
-      accounting on a $46M military housing contract.</p>
+      <p>Today I'm a Technical Product Manager - UI/UX Specialist at Prosera. I work on
+      enterprise AI products for supply chain teams, from customer discovery and interface
+      design in Figma to working features in Cursor alongside engineering. I present prototypes
+      in live customer conversations and iterate in real time as people explain what they need.</p>
 
-      <p><b>It's a weird path into design. I know.</b> I've spent years inside
-      the messy operational workflows enterprise software is supposed to fix. When I'm designing
-      for someone making a call under pressure with half the information, I've been that person.</p>
+      <div className="nda" aria-label="Selected experience">
+        <p><b>6 functional demo prototypes</b> built for third-party logistics (3PL), retail,
+        and logistics workflows. These gave customers something they could try and respond to.</p>
+        <p><b>A global logistics engagement progressed to proof of concept.</b> My work included
+        customer discovery, prototyping, and iteration with feedback from those conversations.</p>
+        <p><b>1,800+ products.</b> Hands-on merchant operations inform how I approach the
+        catalog, promotion, and day-to-day decisions behind an interface.</p>
+      </div>
 
-      <p>A bit more about me. I'm a cat mom of four and a lifelong nerd: art, games, trading cards,
-      tabletop. Four years at a collectibles company was not a coincidence.</p>
+      <p>The demos were built for discovery and evaluation. Their next steps depended on what
+      customers needed and what we learned together. That feedback also shaped my work on
+      agent behavior and output accuracy.</p>
 
-      <p>I like puzzles and anything that makes me sit with a problem longer than is comfortable.
-      I'm a permanent student about most things, which is why the case studies here keep the parts
-      I got wrong.</p>
+      <p>Before ecommerce, I worked in operations and accounting on a $46M military housing
+      contract. Those roles taught me to ask who needs to act, what information they're missing,
+      and what happens when a tool gets in their way.</p>
+
+      <p>Outside work, I'm a cat mom of three and a lifelong nerd: art, games, trading cards,
+      and tabletop. I like puzzles and learning by building. The case studies here keep the
+      parts I got wrong so you can see how the work changed.</p>
     </div>
 
     <aside className="cv">
       <h3>Experience</h3>
       <div className="cv-item">
-        <span><span className="cv-role">UI/UX &amp; Product Development, Sales &amp; Marketing</span>
+        <span><span className="cv-role">Technical Product Manager - UI/UX Specialist</span>
         <span className="cv-org">Prosera, Inc.</span></span>
         <span className="cv-when">2025 &rarr; now</span>
       </div>
@@ -157,7 +166,7 @@ export default function Home() {
 </section>
 
 <section id="contact" className="contact">
-  <div className="sec-head"><span>Contact</span><span className="count">Pacific Time</span></div>
+  <div className="sec-head"><span>Contact</span><span className="count">Central Time</span></div>
   <div className="contact-body">
     <h2>Let's build something people can actually operate.</h2>
     <ContactForm fallback="chloe@hichloe.me" />
@@ -173,7 +182,7 @@ export default function Home() {
 </section>
       </div>
       <footer>
-        <span>Chloe Polk · UI/UX Product Specialist</span>
+        <span>Chloe Polk · Technical Product Manager &amp; Product Designer</span>
         <span>hichloe.me · © 2026</span>
       </footer>
     </>

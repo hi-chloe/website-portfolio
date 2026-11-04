@@ -75,7 +75,7 @@ const res = new ImageResponse(
           color: "#41414A",
         },
       },
-      "UI/UX Product Specialist · hichloe.me"
+      "Technical Product Manager / Product Designer · hichloe.me"
     )
   ),
   {
