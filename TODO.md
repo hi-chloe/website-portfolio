@@ -31,13 +31,6 @@ Ordered by what a reviewer notices first.
 
 ## Content
 
-- [ ] **Replace `public/chloe-polk-resume.pdf` before applying.** The current PDF opens,
-      but still lists Tacoma, WA and the old Prosera role. Replace it with an approved
-      resume showing St. Louis, MO and Technical Product Manager - UI/UX Specialist
-      (Apr 2025–Present). No newer PDF is available in this repository. Keep the public
-      filename so the existing resume link continues to work. Existing employment
-      dates match the homepage's year ranges.
-
 - [ ] **Fix two things in the Meridian Figma file** (`QFFNEkI81GeyRBpkcoX6d6`), not just
       the web page: the hero eyebrow contradiction and "Authorised" in the Rejected
       edge state stat row. The web page is already correct on both.
