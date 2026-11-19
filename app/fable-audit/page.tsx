@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { Band, Meta, Callout } from "@/components/Band";
 import { AuditEvidence } from "@/components/AuditEvidence";
+import { AuditCrop } from "@/components/AuditCrop";
 import { PortfolioFooter } from "@/components/PortfolioFooter";
 
 const title = "Fable Pets, independent ecommerce UX & quality audit · Chloe Polk";
@@ -23,32 +24,51 @@ export default function FableAudit() {
       <main className="audit-page">
         <header className="band hero">
           <div className="eyebrow">Fable Pets · Independent audit · November 2026</div>
-          <h1>Evaluating the shopping experience behind a premium pet brand</h1>
-          <p className="lede">A product photo has to stay still long enough to inspect. A chosen finish has
-          to survive the trip to the cart. I followed a first-time shopper through Fable Pets to see how
-          reliably those details held together, from discovery through checkout entry.</p>
-          <Meta items={[
-            { term: "Role", detail: "Independent Product Quality & Ecommerce UX Auditor" },
-            { term: "Tested", detail: "Desktop Chrome and Chrome on iOS (iPhone)" },
-            { term: "Focus", detail: "Signature Crate shopping journey" },
-            { term: "Date", detail: "November 18, 2026" },
-          ]} />
-          <p className="prov">This was an independent, unsolicited audit. Fable Pets didn't commission or endorse
-          this work. I wasn't hired by or affiliated with the company. No production changes were made to its
-          storefront. The observations describe one test session and may change as the store changes.</p>
-          <div className="links audit-contents" aria-label="Case study sections">
-            <a href="#passed">What worked ↓</a>
-            <a href="#findings">Prioritized findings ↓</a>
-            <a href="#ruled-out">What I ruled out ↓</a>
-            <a href="/reports/fable-pets-independent-ecommerce-quality-audit.pdf" download>Download the full report (PDF, 2.5 MB) ↗</a>
-          </div>
+          <h1>Following the product choice through to the cart</h1>
+          <p className="lede">I performed a first-time shopper walkthrough of Fable Pets, from finding
+          Signature Crate to checkout entry. I checked image controls, variant selection, and cart pricing.</p>
+          <p className="prov">Independent, unsolicited research. I wasn't hired by or affiliated with
+          Fable Pets. The company didn't commission or endorse this audit, and no storefront changes were made.</p>
+          <nav className="links audit-contents" aria-label="Fable audit sections">
+            <a href="#summary">Results</a>
+            <a href="#scope">Test details</a>
+            <a href="#fbl-001">FBL-001 · Hover overlap</a>
+            <a href="#fbl-006">FBL-006 · Gallery control</a>
+            <a href="#fbl-009">FBL-009 · Promotional overlays</a>
+            <a href="#refinements">Design opportunities</a>
+            <a href="#ruled-out">Ruled out and unresolved</a>
+            <a href="/reports/fable-pets-independent-ecommerce-quality-audit.pdf" download>Download the audit report (PDF, 2.5 MB)</a>
+          </nav>
         </header>
+
+        <Band id="summary" eyebrow="Results at a glance">
+          <div className="cols audit-summary">
+            <div className="body">
+              <h2>Three priorities. A correct cart. One withdrawn concern.</h2>
+              <ul className="audit-list">
+                <li><b>Investigate first:</b> desktop hover overlap, mobile gallery control, and promotions covering content. All three carry provisional Medium priority.</li>
+                <li><b>Verified:</b> Medium / White Gate / Signature Finish persisted in the cart. The 25% discount produced a $1,049.25 subtotal, before shipping and taxes.</li>
+                <li><b>Withdrawn:</b> the sizing concern came from an incomplete test scenario. The store provided dimensions.</li>
+              </ul>
+              <p>This is a record of one walkthrough and its evidence. It doesn't establish a technical
+              root cause, measured conversion impact, or an accessibility conformance result.</p>
+              <a href="#fbl-009">Read the overlay finding and retest plan →</a>
+            </div>
+            <AuditCrop />
+          </div>
+        </Band>
 
         <Band id="scope" eyebrow="01 · The question and the method">
           <h2>Can you evaluate the product and carry the right choice to checkout?</h2>
           <p className="lede">For expensive pet furniture, the decision involves dimensions, materials,
           finishes, and delivery. I wanted to see whether a customer could find those details, inspect
           the product, and keep their selection intact across desktop and mobile.</p>
+          <Meta items={[
+            { term: "Auditor", detail: "Chloe Polk · Independent Product Quality & Ecommerce UX Auditor" },
+            { term: "Platforms", detail: "Desktop Chrome and Chrome on iOS (iPhone)" },
+            { term: "Selected variant", detail: "Medium / White Gate / Signature Finish" },
+            { term: "Date", detail: "November 18, 2026" },
+          ]} />
           <ol className="chain audit-journey" aria-label="Tested shopping journey">
             {[
               ["Homepage", "Find a route into the catalog"], ["Navigation", "Locate the right collection"],
@@ -62,9 +82,13 @@ export default function FableAudit() {
               <h3>How I tested</h3>
               <p>I used scenario-based usability testing, cross-device visual QA, heuristic evaluation,
               product discovery testing, variant-selection testing, and cart/checkout verification.
-              I recorded the visible state and compared it with the task I was trying to complete.</p>
+              I recorded the visible state and compared it with the task I was trying to complete.
+              I was the only tester; this was my own walkthrough, without recruited participants.</p>
               <p>The scenario started with a hypothetical 20-pound dog. It didn't include body
               measurements. That mattered: weight alone wasn't enough to establish a sizing problem.</p>
+              <p>The report and captures record the selected variant and cart amounts. Browser versions,
+              iPhone model, and viewport sizes weren't recorded. The reproduction steps below are plans
+              for controlled retesting; they don't claim a repeatable trigger was already established.</p>
               <h3>Where testing stopped</h3>
               <p>I opened checkout but didn't place an order. I had no access to analytics, storefront
               code, inventory logic, or customer research. This wasn't a comprehensive accessibility,
@@ -110,7 +134,8 @@ export default function FableAudit() {
           </div>
         </Band>
 
-        <Band id="findings" eyebrow="03 · FBL-001 · Medium · Screenshot-supported">
+        <Band id="fbl-001" eyebrow="03 · FBL-001 · Medium · Screenshot-supported">
+          <div id="findings" aria-hidden="true" />
           <h2>Hover imagery needs consistent bounds</h2>
           <div className="cols audit-evidence-layout">
             <div className="body">
@@ -136,7 +161,7 @@ export default function FableAudit() {
           </div>
         </Band>
 
-        <Band eyebrow="04 · FBL-006 · Medium · Tester and recording-supported">
+        <Band id="fbl-006" eyebrow="04 · FBL-006 · Medium · Tester and recording-supported">
           <h2>Let the shopper hold an image still</h2>
           <div className="cols audit-evidence-layout">
             <div className="body">
@@ -161,7 +186,7 @@ export default function FableAudit() {
           </div>
         </Band>
 
-        <Band eyebrow="05 · FBL-009 · Medium · Screenshot-supported">
+        <Band id="fbl-009" eyebrow="05 · FBL-009 · Medium · Screenshot-supported">
           <h2>Promotions should leave the shopping controls clear</h2>
           <div className="cols audit-evidence-layout">
             <div className="body">
@@ -190,15 +215,15 @@ export default function FableAudit() {
           <h2>Keep design preferences separate from defects</h2>
           <div className="cols audit-evidence-layout">
             <div className="body">
-              <h3>FBL-007 · Product-specific enlargement · Low / explore</h3>
+              <h3 id="fbl-007">FBL-007 · Product-specific enlargement · Low / explore</h3>
               <p>Tapping the product image didn't open a dedicated enlarged view during testing.
               Page-level zoom was possible. A gallery with zoom and manual navigation could help
               shoppers inspect materials and finishes. This is an enhancement opportunity.</p>
-              <h3>FBL-002 / FBL-003 · Card separation and spacing · Low / design</h3>
+              <h3 id="fbl-002-003">FBL-002 / FBL-003 · Card separation and spacing · Low / design</h3>
               <p>Pale photography and similarly colored backgrounds give the cards subtle boundaries.
               Titles, descriptions, and prices also appear close to card edges. I'd test modest
               separation and consistent metadata padding while keeping Fable's minimalist aesthetic.</p>
-              <h3>FBL-008 · Third-party panel styling · Low / design</h3>
+              <h3 id="fbl-008">FBL-008 · Third-party panel styling · Low / design</h3>
               <p>The dismissible accessiBe panel used a blue treatment that differed from the storefront.
               Better visual integration is worth exploring. The styling doesn't establish an
               accessibility failure, and an overlay's presence doesn't establish WCAG conformance.</p>
@@ -214,16 +239,16 @@ export default function FableAudit() {
           <h2>A hypothesis has to survive the evidence</h2>
           <div className="close-grid">
             <div>
-              <h3>FBL-004 · Sizing concern withdrawn</h3>
+              <h3 id="fbl-004">FBL-004 · Sizing concern withdrawn</h3>
               <p>The scenario specified a 20-pound dog without body measurements. The store supplied
               product dimensions. The gap was in my scenario, so I withdrew the proposed defect.</p>
-              <h3>FBL-010 · Timer excluded as a defect</h3>
+              <h3 id="fbl-010">FBL-010 · Timer excluded as a defect</h3>
               <p>Checkout showed a roughly 10-minute order-secured countdown. It may reflect a
               legitimate inventory reservation. I didn't verify backend behavior and couldn't support
               a claim of deceptive urgency.</p>
             </div>
             <div>
-              <h3>FBL-005 · Final-sale prominence unresolved</h3>
+              <h3 id="fbl-005">FBL-005 · Final-sale prominence unresolved</h3>
               <p>Returns and purchase information were available, but I didn't fully verify the
               prominence of final-sale terms at the exact purchase decision. That remains an open
               question, rather than a confirmed defect.</p>

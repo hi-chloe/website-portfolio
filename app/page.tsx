@@ -1,8 +1,14 @@
+import { pageMetadata } from "@/lib/pageMetadata";
 import { HeroLockup } from "@/components/HeroLockup";
 import { Nav } from "@/components/Nav";
 import { CopyEmail } from "@/components/CopyEmail";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ContactForm } from "@/components/ContactForm";
+
+export const metadata = pageMetadata({
+  path: "/", title: "Chloe Polk · Technical Product Manager & Product Designer",
+  description: "Technical product manager and product designer connecting hands-on Shopify and TikTok Shop merchant operations with usable enterprise AI products.",
+});
 
 export default function Home() {
   return (
@@ -78,9 +84,8 @@ export default function Home() {
     <span className="row-num">03</span>
     <span className="row-copy">
       <span className="row-title">Fable Pets, ecommerce UX &amp; quality audit</span>
-      <span className="row-desc">An independent evaluation of a premium ecommerce storefront,
-      tracing product discovery through checkout entry and documenting cross-device quality
-      issues with reproducible evidence.</span>
+      <span className="row-desc">My independent walkthrough of a premium pet storefront. Three provisional
+      priorities, a verified cart subtotal, and a sizing concern withdrawn after checking the evidence.</span>
       <span className="row-stats"><span>Independent, unsolicited audit</span><span>Desktop &amp; mobile</span><span>November 2026</span></span>
     </span>
     <span className="tags"><span className="tag">Ecommerce</span><span className="tag">Product Quality</span>

@@ -8,7 +8,7 @@ export function ReadingProgress() {
 
   useEffect(() => {
     const onScroll = () => {
-      const nav = document.querySelector("nav");
+      const nav = document.querySelector('nav[aria-label="Site"]');
       nav?.classList.toggle("scrolled", scrollY > 12);
       const h = document.documentElement.scrollHeight - innerHeight;
       if (bar.current) bar.current.style.width = `${h > 0 ? (scrollY / h) * 100 : 0}%`;
