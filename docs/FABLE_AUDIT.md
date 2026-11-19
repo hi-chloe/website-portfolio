@@ -11,6 +11,9 @@
 - PortfolioFooter is shared by the two new routes. Existing case-study files and the contact endpoint are unchanged.
 - ContactForm accepts an optional defaultSubject. The homepage retains its empty subject; services uses an editable audit inquiry subject.
 
+The tester confirmed the platforms as desktop Chrome and Chrome on iOS (iPhone).
+The original report is retained unchanged.
+
 ## Evidence provenance
 
 The supplied `Fable_Pets_Independent_Ecommerce_Quality_Audit.pdf` is copied unchanged to

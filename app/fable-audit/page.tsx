@@ -29,7 +29,7 @@ export default function FableAudit() {
           reliably those details held together, from discovery through checkout entry.</p>
           <Meta items={[
             { term: "Role", detail: "Independent Product Quality & Ecommerce UX Auditor" },
-            { term: "Tested", detail: "Desktop Chrome and a mobile browser on iPhone" },
+            { term: "Tested", detail: "Desktop Chrome and Chrome on iOS (iPhone)" },
             { term: "Focus", detail: "Signature Crate shopping journey" },
             { term: "Date", detail: "November 18, 2026" },
           ]} />
@@ -147,7 +147,7 @@ export default function FableAudit() {
               isn't available in this case study.</p>
               <h3>Reproduction path to verify</h3>
               <ol className="audit-list">
-                <li>Open Signature Crate on an iPhone and leave the gallery untouched.</li>
+                <li>Open Signature Crate in Chrome on iOS and leave the gallery untouched.</li>
                 <li>Record a 20-second hands-off test, then try manual navigation.</li>
                 <li>Check the trigger, timing, pause behavior, and reduced-motion preference.</li>
               </ol>
