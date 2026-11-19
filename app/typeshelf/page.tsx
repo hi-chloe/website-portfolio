@@ -66,15 +66,15 @@ export default function Typeshelf() {
         <p>So the whole product is one constraint: load the folder, drive the specimen, and never
         move the bytes.</p>
       </div>
-      <aside className="side-card">
-        <h4>What it reads</h4>
+      <div className="side-card">
+        <h3 className="detail-heading">What it reads</h3>
         <div className="chips">
           <span className="chip">.ttf</span><span className="chip">.otf</span><span className="chip">.woff</span>
           <span className="chip">.woff2</span><span className="chip">.ttc</span>
         </div>
         <p className="foot">Plus the Local Font Access API on Chrome and Edge, which hands over every font
         already installed on the machine. Often 300 to 1,000+ faces.</p>
-      </aside>
+      </div>
     </div>
 
     <figure>
@@ -164,7 +164,7 @@ export default function Typeshelf() {
     <h2>Five schemes, two modes, one token file</h2>
     <p className="lede">A scheme changes the neutrals as well as the accent, so every surface moves when
     you switch. That means re-checking every color pair in every theme. Ten full palettes.</p>
-    <pre>data-scheme × data-mode  →  CSS custom properties
+    <pre tabIndex={0} aria-label="Theme token rules">data-scheme × data-mode  →  CSS custom properties
 <b>no</b> dark: variants in components
 <b>no</b> Tailwind palette classes anywhere
 <b>no</b> raw color literals outside two documented exceptions</pre>
@@ -244,7 +244,7 @@ export default function Typeshelf() {
     decided, how the tokens resolve, and what CI is allowed to fail you for.</p>
     <div className="close-grid">
       <div>
-        <h4>What I'd do next</h4>
+        <h3 className="detail-heading">What I'd do next</h3>
         <ul>
           <li>Test whether anyone notices that variants are load-only, or whether a missing Bold just reads as broken.</li>
           <li>Virtualize the list. 1,000 faces from the Local Font Access API is a lot of DOM.</li>
@@ -252,7 +252,7 @@ export default function Typeshelf() {
         </ul>
       </div>
       <div>
-        <h4>Known limitations</h4>
+        <h3 className="detail-heading">Known limitations</h3>
         <ul>
           <li>Contrast is verified. Keyboard and screen reader flows are only partly verified.</li>
           <li>Local Font Access is Chrome and Edge only; everywhere else is drag-and-drop.</li>

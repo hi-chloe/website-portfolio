@@ -58,8 +58,8 @@ export default function Meridian() {
         <p>Most tools show you a metric or fire an alert, then leave you to piece the situation together
         yourself. Usually while guests are already feeling it.</p>
       </div>
-      <aside className="side-card">
-        <h4>Where the signals live</h4>
+      <div className="side-card">
+        <h3 className="detail-heading">Where the signals live</h3>
         <div className="chips">
           <span className="chip">Point of sale</span><span className="chip">Labor scheduling</span>
           <span className="chip">Inventory</span><span className="chip">Equipment &amp; maintenance</span>
@@ -68,7 +68,7 @@ export default function Meridian() {
           <span className="chip">Local events</span><span className="chip">Messages from GMs</span>
         </div>
         <p className="foot">Ten sources. No shared definition of normal. No shared owner.</p>
-      </aside>
+      </div>
     </div>
   </section>
 
@@ -179,10 +179,10 @@ export default function Meridian() {
     <p className="lede">The whole thing follows a single Saturday. Every number here shows up again on every
     screen, and each one is worked out somewhere you can see it.</p>
     <dl className="stats">
-      <div><dt>Region</dt><div className="fig">Southwest</div><div className="cap">12 locations</div></div>
-      <div><dt>Trigger</dt><div className="fig">Sat 15 Mar</div><div className="cap">reservations +38% vs 4-week mean</div></div>
-      <div><dt>Exposure</dt><div className="fig">270 – 420</div><div className="cap">covers at risk across 3 locations</div></div>
-      <div><dt>Modeled</dt><div className="fig">$14k – $22k</div><div className="cap">270–420 covers × $52 avg check</div></div>
+      <div><dt>Region</dt><dd><div className="fig">Southwest</div><div className="cap">12 locations</div></dd></div>
+      <div><dt>Trigger</dt><dd><div className="fig">Sat 15 Mar</div><div className="cap">reservations +38% vs 4-week mean</div></dd></div>
+      <div><dt>Exposure</dt><dd><div className="fig">270 – 420</div><div className="cap">covers at risk across 3 locations</div></dd></div>
+      <div><dt>Modeled</dt><dd><div className="fig">$14k – $22k</div><div className="cap">270–420 covers × $52 avg check</div></dd></div>
     </dl>
     <p className="figcaption">
       Every figure below traces back to these four. Nothing gets invented downstream.</p>
@@ -265,7 +265,7 @@ export default function Meridian() {
       </div>
     </figure>
 
-    <table>
+    <table tabIndex={0} aria-label="Predicted and actual outcomes">
       <caption>Predicted vs actual, stated plainly, including the miss</caption>
       <thead><tr><th scope="col">Measure</th><th scope="col">Predicted</th><th scope="col">Actual</th><th scope="col">Result</th></tr></thead>
       <tbody>
@@ -386,10 +386,10 @@ export default function Meridian() {
     component holds a hex value. Building the whole dark theme meant switching one frame's mode, then
     auditing what broke.</p>
     <dl className="stats">
-      <div><dt>Primitives</dt><div className="fig">44</div><div className="cap">raw values, never used directly</div></div>
-      <div><dt>Semantic tokens</dt><div className="fig">30</div><div className="cap">each resolving in light and dark</div></div>
-      <div><dt>Text styles</dt><div className="fig">24</div><div className="cap">Inter throughout, mono for identifiers</div></div>
-      <div><dt>Library components</dt><div className="fig">23</div><div className="cap">63 variants, every fill token-bound</div></div>
+      <div><dt>Primitives</dt><dd><div className="fig">44</div><div className="cap">raw values, never used directly</div></dd></div>
+      <div><dt>Semantic tokens</dt><dd><div className="fig">30</div><div className="cap">each resolving in light and dark</div></dd></div>
+      <div><dt>Text styles</dt><dd><div className="fig">24</div><div className="cap">Inter throughout, mono for identifiers</div></dd></div>
+      <div><dt>Library components</dt><dd><div className="fig">23</div><div className="cap">63 variants, every fill token-bound</div></dd></div>
     </dl>
     <figure>
       <div className="theme-pair">
@@ -415,7 +415,7 @@ export default function Meridian() {
 
     <div className="close-grid">
       <div>
-        <h4>What I want to test next</h4>
+        <h3 className="detail-heading">What I want to test next</h3>
         <ul>
           <li>How long it takes to find the highest-risk incident cold.</li>
           <li>Whether people can restate where a revenue number came from.</li>
@@ -423,7 +423,7 @@ export default function Meridian() {
         </ul>
       </div>
       <div>
-        <h4>Known limitations</h4>
+        <h3 className="detail-heading">Known limitations</h3>
         <ul>
           <li>Every figure on this page is constructed for the write-up, not client data. No model
           has been trained behind it yet.</li>

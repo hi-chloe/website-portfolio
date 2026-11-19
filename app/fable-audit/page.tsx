@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/pageMetadata";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { Band, Meta, Callout } from "@/components/Band";
@@ -8,12 +8,10 @@ import { PortfolioFooter } from "@/components/PortfolioFooter";
 
 const title = "Fable Pets, independent ecommerce UX & quality audit · Chloe Polk";
 const description = "An independent, unsolicited storefront audit by Chloe Polk. Product discovery, image controls, variant selection, and cart verification across desktop and mobile.";
-export const metadata: Metadata = {
-  title, description, alternates: { canonical: "/fable-audit" },
-  openGraph: { type: "article", url: "/fable-audit", title, description,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Chloe Polk, technical product manager and product designer" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
-};
+export const metadata = pageMetadata({
+  title, description, path: "/fable-audit", type: "article",
+  image: { url: "/og-fable-audit.png", alt: "Fable Pets: independent, unsolicited ecommerce UX and quality audit by Chloe Polk. No affiliation." },
+});
 
 export default function FableAudit() {
   return (
@@ -94,7 +92,7 @@ export default function FableAudit() {
               code, inventory logic, or customer research. This wasn't a comprehensive accessibility,
               performance, security, or full-site technical audit.</p>
             </div>
-            <aside className="side-card audit-copy">
+            <div className="side-card audit-copy">
               <h3>How to read the evidence</h3>
               <p><b>Screenshot-supported:</b> visible in a captured state.</p>
               <p><b>Tester-reported:</b> observed during the manual session.</p>
@@ -103,7 +101,7 @@ export default function FableAudit() {
               <p className="foot">Priorities are provisional judgments about shopping friction. They
               aren't measured conversion impact. The five stills here are extracted from the original
               report; the recording isn't included on this page.</p>
-            </aside>
+            </div>
           </div>
         </Band>
 
