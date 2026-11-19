@@ -28,7 +28,7 @@ export default function Home() {
 </header>
 
 <section id="work">
-  <div className="sec-head"><span>Selected work</span><span className="count">02 · 2026</span></div>
+  <div className="sec-head"><span>Selected work</span><span className="count">03 · 2026</span></div>
 
   <a className="row" href="/meridian" data-cursor="View">
     <span className="row-num">01</span>
@@ -74,7 +74,20 @@ export default function Home() {
     </span>
   </a>
 
-  <div className="index-foot">More work in progress. Tags become filters once there's enough to filter.</div>
+  <a className="row" href="/fable-audit" data-cursor="View">
+    <span className="row-num">03</span>
+    <span className="row-copy">
+      <span className="row-title">Fable Pets, ecommerce UX &amp; quality audit</span>
+      <span className="row-desc">An independent evaluation of a premium ecommerce storefront,
+      tracing product discovery through checkout entry and documenting cross-device quality
+      issues with reproducible evidence.</span>
+      <span className="row-stats"><span>Independent, unsolicited audit</span><span>Desktop &amp; mobile</span><span>November 2026</span></span>
+    </span>
+    <span className="tags"><span className="tag">Ecommerce</span><span className="tag">Product Quality</span>
+      <span className="tag">UX Research</span><span className="tag">Usability Testing</span></span>
+  </a>
+
+  <div className="index-foot">Looking for an outside view of your storefront? <a href="/ecommerce-audits">Explore independent ecommerce audits →</a></div>
 </section>
 
 <section id="about" className="about">
@@ -176,6 +189,7 @@ export default function Home() {
     </div>
     <div className="contact-meta">
       <a href="https://www.linkedin.com/in/chloe-polk" target="_blank" rel="noopener noreferrer" data-cursor="Open">LinkedIn</a>
+      <a href="/ecommerce-audits">Ecommerce audits</a>
       <a href="/chloe-polk-resume.pdf" target="_blank" rel="noopener" data-cursor="Open">Résumé (PDF)</a>
     </div>
   </div>

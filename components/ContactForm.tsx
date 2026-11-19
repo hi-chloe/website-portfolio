@@ -11,7 +11,7 @@ type Errors = Partial<Record<"name" | "email" | "message" | "form", string>>;
  * that only a script would fill, and the time between mount and submit. Neither
  * costs a real visitor anything.
  */
-export function ContactForm({ fallback }: { fallback: string }) {
+export function ContactForm({ fallback, defaultSubject = "" }: { fallback: string; defaultSubject?: string }) {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errors, setErrors] = useState<Errors>({});
   const mounted = useRef(0);
@@ -82,7 +82,7 @@ export function ContactForm({ fallback }: { fallback: string }) {
 
       <label className="field">
         <span>What's this about?<i> optional</i></span>
-        <input name="subject" type="text" maxLength={150} />
+        <input name="subject" type="text" maxLength={150} defaultValue={defaultSubject} />
       </label>
 
       <label className="field">
