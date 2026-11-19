@@ -16,8 +16,8 @@ export default function Home() {
       <a className="skip" href="#work">Skip to work</a>
       <ReadingProgress />
       <Nav />
-      <div className="home">
-<header className="hero-home" id="top">
+      <div className="home" role="main">
+<div className="hero-home" id="top">
   <div className="hero-row">
     <div className="lockup-wrap">
       <HeroLockup lines={["hi, i'm", "chloe."]} />
@@ -31,10 +31,10 @@ export default function Home() {
   <div className="hero-foot">
     <span className="scroll">Selected work ↓</span>
   </div>
-</header>
+</div>
 
 <section id="work">
-  <div className="sec-head"><span>Selected work</span><span className="count">03 · 2026</span></div>
+  <div className="sec-head"><h2>Selected work</h2><span className="count">03 · 2026</span></div>
 
   <a className="row" href="/meridian" data-cursor="View">
     <span className="row-num">01</span>
@@ -84,8 +84,8 @@ export default function Home() {
     <span className="row-num">03</span>
     <span className="row-copy">
       <span className="row-title">Fable Pets, ecommerce UX &amp; quality audit</span>
-      <span className="row-desc">My independent walkthrough of a premium pet storefront. Three provisional
-      priorities, a verified cart subtotal, and a sizing concern withdrawn after checking the evidence.</span>
+      <span className="row-desc">An independent, cross-device ecommerce quality audit. I tested product discovery,
+      shopping interactions, and cart integrity, then documented the evidence and practical recommendations.</span>
       <span className="row-stats"><span>Independent, unsolicited audit</span><span>Desktop &amp; mobile</span><span>November 2026</span></span>
     </span>
     <span className="tags"><span className="tag">Ecommerce</span><span className="tag">Product Quality</span>
@@ -115,7 +115,7 @@ export default function Home() {
       }),
     }}
   />
-  <div className="sec-head"><span>About</span><span className="count">St. Louis, MO</span></div>
+  <div className="sec-head"><h2>About</h2><span className="count">St. Louis, MO</span></div>
   <div className="about-grid">
     <div>
       <p className="lead">I came to product through the work of running a business: catalogs,
@@ -152,7 +152,7 @@ export default function Home() {
       parts I got wrong so you can see how the work changed.</p>
     </div>
 
-    <aside className="cv">
+    <div className="cv">
       <h3>Experience</h3>
       <div className="cv-item">
         <span><span className="cv-role">Technical Product Manager - UI/UX Specialist</span>
@@ -179,7 +179,7 @@ export default function Home() {
         <span className="tag">Prompt engineering</span><span className="tag">Prototyping</span>
         <span className="tag">Illustrator</span><span className="tag">Photoshop</span>
       </div>
-    </aside>
+    </div>
   </div>
 </section>
 

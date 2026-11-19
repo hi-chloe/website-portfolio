@@ -2,7 +2,9 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 
-type Errors = Partial<Record<"name" | "email" | "message" | "form", string>>;
+import { CONTACT_LIMITS, validateContact, type ContactFieldErrors } from "@/lib/contactValidation";
+
+type Errors = ContactFieldErrors & { form?: string };
 
 /**
  * Contact form. Posts to /api/contact, which sends the mail via Resend.
@@ -34,10 +36,19 @@ export function ContactForm({ fallback, defaultSubject = "", submitLabel = "Send
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (state === "sending") return;
+    const fd = new FormData(e.currentTarget);
+    const fieldErrors = validateContact({
+      name: String(fd.get("name") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      message: String(fd.get("message") ?? ""),
+    });
+    if (Object.keys(fieldErrors).length) {
+      setErrors(fieldErrors);
+      setState("idle");
+      return;
+    }
     setState("sending");
     setErrors({});
-
-    const fd = new FormData(e.currentTarget);
     const payload = {
       name: fd.get("name"),
       email: fd.get("email"),
@@ -95,13 +106,13 @@ export function ContactForm({ fallback, defaultSubject = "", submitLabel = "Send
       <div className="field-row">
         <label className="field">
           <span>Name</span>
-          <input id={`${id}-name`} name="name" type="text" autoComplete="name" required maxLength={100}
+          <input id={`${id}-name`} name="name" type="text" autoComplete="name" required maxLength={CONTACT_LIMITS.name}
                  aria-invalid={!!errors.name} aria-describedby={errors.name ? `${id}-name-err` : undefined} />
           {err("name")}
         </label>
         <label className="field">
           <span>Email</span>
-          <input id={`${id}-email`} name="email" type="email" autoComplete="email" required maxLength={200}
+          <input id={`${id}-email`} name="email" type="email" autoComplete="email" required maxLength={CONTACT_LIMITS.email}
                  aria-invalid={!!errors.email} aria-describedby={errors.email ? `${id}-email-err` : undefined} />
           {err("email")}
         </label>
@@ -109,12 +120,12 @@ export function ContactForm({ fallback, defaultSubject = "", submitLabel = "Send
 
       <label className="field">
         <span>What's this about?<i> optional</i></span>
-        <input name="subject" type="text" maxLength={150} defaultValue={defaultSubject} />
+        <input name="subject" type="text" maxLength={CONTACT_LIMITS.subject} defaultValue={defaultSubject} />
       </label>
 
       <label className="field">
         <span>Message</span>
-        <textarea id={`${id}-message`} name="message" rows={5} required maxLength={4000}
+        <textarea id={`${id}-message`} name="message" rows={5} required maxLength={CONTACT_LIMITS.message}
                   aria-invalid={!!errors.message} aria-describedby={errors.message ? `${id}-message-err` : undefined} />
         {err("message")}
       </label>

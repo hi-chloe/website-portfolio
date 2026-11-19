@@ -1,5 +1,5 @@
 import { EditorialArt } from "@/components/EditorialArt";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/pageMetadata";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { Band, Meta } from "@/components/Band";
@@ -10,12 +10,10 @@ import { PortfolioFooter } from "@/components/PortfolioFooter";
 
 const title = "Independent ecommerce audits · Chloe Polk";
 const description = "A structured, independent review of your storefront's shopping journey. Desktop and mobile observations, screenshot evidence, and practical recommendations. Pilot health checks starting at $349 USD.";
-export const metadata: Metadata = {
-  title, description, alternates: { canonical: "/ecommerce-audits" },
-  openGraph: { type: "website", url: "/ecommerce-audits", title, description,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Chloe Polk, technical product manager and product designer" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
-};
+export const metadata = pageMetadata({
+  title, description, path: "/ecommerce-audits", type: "website",
+  image: { url: "/og-ecommerce-audits.png", alt: "Storefront Health Check by Chloe Polk. Evidence-led desktop and mobile reviews. Introductory pilot starting at $349 USD." },
+});
 
 export default function EcommerceAudits() {
   return (
@@ -74,8 +72,13 @@ export default function EcommerceAudits() {
                 <li>Actionable recommendations and suggested follow-up checks.</li>
                 <li>A concise final report that separates observed problems from design opportunities.</li>
               </ul>
+              <div className="links">
+                <a className="btn" href="/reports/fable-pets-independent-ecommerce-quality-audit.pdf" target="_blank" rel="noopener noreferrer">View a sample audit report (PDF) ↗</a>
+              </div>
+              <p className="prov">This sample is independent, unsolicited portfolio research.
+              Fable Pets didn't commission or endorse it.</p>
             </div>
-            <aside className="side-card audit-copy">
+            <div className="side-card audit-copy">
               <h3>Where this is useful</h3>
               <p>You want an outside view of a shopping path before a promotion, after a storefront
               change, or when a product page feels harder to use than it should.</p>
@@ -84,7 +87,7 @@ export default function EcommerceAudits() {
               and the choice a customer is trying to make.</p>
               <p className="foot">The pilot keeps the scope focused. We'll confirm the products,
               devices, and journey together before starting.</p>
-            </aside>
+            </div>
           </div>
         </Band>
 

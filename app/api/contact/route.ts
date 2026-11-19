@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { CONTACT_LIMITS as MAX, validateContact } from "@/lib/contactValidation";
 
 /**
  * Contact form endpoint.
@@ -12,7 +13,6 @@ import { NextResponse } from "next/server";
  *   CONTACT_TO       where the mail lands (chloe@hichloe.me)
  */
 const FROM = "hichloe.me <noreply@hichloe.me>"; // must be on a domain verified in Resend
-const MAX = { name: 100, email: 200, subject: 150, message: 4000 };
 
 /** Crude per-IP throttle on *sends only*. Serverless instances are short-lived
  *  so this resets often. It slows a lazy script down and isn't real abuse
@@ -33,7 +33,6 @@ function throttled(ip: string) {
   return recent.length > RATE.max;
 }
 
-const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
 const clean = (v: unknown, cap: number) =>
   typeof v === "string" ? v.trim().slice(0, cap) : "";
 
@@ -61,12 +60,7 @@ export async function POST(req: Request) {
   const subject = clean(body.subject, MAX.subject);
   const message = clean(body.message, MAX.message);
 
-  const errors: Record<string, string> = {};
-  if (!name) errors.name = "Please add your name.";
-  if (!email) errors.email = "Please add an email so I can reply.";
-  else if (!isEmail(email)) errors.email = "That email doesn't look right.";
-  if (!message) errors.message = "Please add a message.";
-  else if (message.length < 10) errors.message = "A little more detail would help.";
+  const errors = validateContact({ name, email, message });
   if (Object.keys(errors).length) {
     return NextResponse.json({ errors }, { status: 422 });
   }
