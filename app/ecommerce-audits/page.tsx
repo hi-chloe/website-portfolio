@@ -1,3 +1,4 @@
+import { EditorialArt } from "@/components/EditorialArt";
 import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -87,8 +88,9 @@ export default function EcommerceAudits() {
           </div>
         </Band>
 
-        <Band eyebrow="02 · How it works">
+        <Band id="process" eyebrow="02 · How it works">
           <h2>Agree on a path. Test it. Keep the evidence.</h2>
+          <div className="cols editorial-split">
           <ol className="ladder">
             <li><span className="k">01</span><div><b>Tell me about your storefront</b><p>Send your
               store URL, the products or journey you want reviewed, and any concerns you already
@@ -101,6 +103,8 @@ export default function EcommerceAudits() {
               what worked, what needs attention, what I couldn't confirm, and where I'd start.
               Findings include evidence and suggested next checks so your team can investigate.</p></div></li>
           </ol>
+          <EditorialArt kind="audit" />
+          </div>
         </Band>
 
         <Band eyebrow="03 · A worked example">

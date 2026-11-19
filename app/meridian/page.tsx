@@ -1,3 +1,4 @@
+import { EditorialArt } from "@/components/EditorialArt";
 import { pageMetadata } from "@/lib/pageMetadata";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -72,8 +73,10 @@ export default function Meridian() {
   </section>
 
   {/* --------------------------------------------------------------- */}
-  <section className="band">
+  <section className="band" id="lessons">
     <div className="eyebrow">Where this comes from</div>
+    <div className="cols editorial-split editorial-intro">
+    <div>
     <h2>What I learned on a product I can&apos;t show you</h2>
     <p className="lede">Meridian is my own build, so none of this was learned by shipping
     Meridian. It came from an enterprise AI product I worked on with a team, in a different
@@ -84,6 +87,10 @@ export default function Meridian() {
       <p>How can I trust this? Where are these numbers from? This is great in theory, but
       what can I actually do with it?</p>
       <span className="who">The three questions that come up in almost every client meeting</span>
+    </div>
+
+    </div>
+    <EditorialArt kind="lessons" />
     </div>
 
     <ol className="ladder lessons">

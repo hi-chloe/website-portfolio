@@ -1,3 +1,4 @@
+import { EditorialArt } from "@/components/EditorialArt";
 import { pageMetadata } from "@/lib/pageMetadata";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -105,12 +106,13 @@ export default function Typeshelf() {
     </div>
   </section>
 
-  <section className="band">
+  <section className="band" id="classification">
     <div className="eyebrow">Classification</div>
     <h2>Sorting a folder you've never seen</h2>
     <p className="lede">Fonts arrive with no reliable category. Some carry good metadata, plenty carry
     none, and a few lie. So classification runs as a ladder. Each rung only answers when it
     actually knows, and hands down when it doesn't.</p>
+    <div className="cols editorial-split">
     <ol className="ladder">
       <li><span className="k">01</span><div><b>Fixed pitch flag</b>
         <p>The <code>post</code> table says outright whether every glyph is the same width. If
@@ -129,6 +131,8 @@ export default function Typeshelf() {
         <p>When nothing above answers, the font goes to Other. You can go find a font in Other.
         You'll never think to look for a serif under Script.</p></div></li>
     </ol>
+    <EditorialArt kind="classification" />
+    </div>
   </section>
 
   <section className="band">

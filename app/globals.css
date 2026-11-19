@@ -802,3 +802,15 @@
 .form-errors li + li{margin-top:6px}
 .form-errors a{text-underline-offset:3px}
 .form-errors:focus,.form-done:focus{outline:2px solid var(--accent);outline-offset:4px}
+
+
+/* Decorative editorial series, separate from project screenshots and evidence. */
+.editorial-split{align-items:center}
+.editorial-split > .ladder{margin-top:0}
+.editorial-art{width:100%;max-width:520px;justify-self:center}
+.editorial-art img{display:block;width:100%;height:auto;border-radius:var(--r-card)}
+@media (max-width:860px){
+  .editorial-art{max-width:360px}
+}
+
+.editorial-intro{margin-top:0}
