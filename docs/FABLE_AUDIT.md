@@ -94,3 +94,12 @@ five routes at 320/375/768/1440px, and verifies PDF byte equality, reduced motio
 progress, and reveal behavior. Visual inspection covers the annotated crop and both pages
 at desktop and mobile widths. Actual email delivery and listening with a screen reader
 remain manual checks; DOM roles, live-region markup, and keyboard behavior are verified.
+
+
+## Editorial process artwork
+
+The service process pairs its steps with a generated grainy editorial illustration in the
+portfolio's paper, ink, and violet palette. It is decorative (`alt=""`, hidden from the
+accessibility tree), static, and separate from all audit evidence. Two WebP sizes are
+provided with responsive selection and intrinsic dimensions. The original generated PNG
+is retained outside the repository; only the optimized web assets ship.
