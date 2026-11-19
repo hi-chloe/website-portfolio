@@ -1,4 +1,4 @@
-/* hichloe.me — one stylesheet, three pages.
+/* hichloe.me — one stylesheet.
    Tokens first, then shared chrome, then case-study blocks, then home. */
 
 :root{
@@ -738,4 +738,45 @@
   .side-card:hover,.mer:hover,.cv:hover,.portrait:hover,
   .mailto:hover,.btn:hover{transform:none}
   .mailto:hover{background:var(--paper)}
+}
+
+
+/* ---------- independent audits: existing editorial bands and evidence ---------- */
+.audit-page .eyebrow,.audit-page .meta dt,.audit-page figcaption,
+.audit-page .side-card .foot,.audit-page .next span,
+.audit-page .callout .who,.audit-page .ladder li:last-child .k{color:var(--ink-60)}
+.audit-page .audit-contents{gap:14px 26px;font-size:13px}
+.audit-journey{list-style:none}
+.audit-list{padding-left:22px;color:var(--ink-70);margin:16px 0 24px;max-width:var(--measure)}
+.audit-list li + li{margin-top:10px}
+.audit-page .body h3:not(:first-child){margin-top:28px}
+.audit-copy p + p{margin-top:14px}
+.audit-copy p{font-size:14px;color:var(--ink-70)}
+.audit-copy .foot{color:var(--ink-60)}
+.audit-page .audit-evidence-layout{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.audit-evidence{min-width:0;max-width:360px;width:100%;justify-self:center}
+.audit-evidence-desktop{max-width:540px}
+.audit-evidence figure{margin-top:0}
+.audit-evidence figcaption{max-width:none;line-height:1.6}
+.audit-evidence figcaption a{display:block;margin-top:8px;text-underline-offset:3px}
+.audit-page .close-grid h3:not(:first-child){margin-top:28px}
+.audit-page .close-grid p{font-size:14.5px;color:var(--ink-70);line-height:1.62}
+.audit-page .close-grid p + p{margin-top:16px}
+.audit-inquiry{padding:clamp(28px,5vw,64px);border-radius:var(--r-card)}
+.audit-inquiry .lede{color:var(--paper);max-width:60ch}
+.audit-inquiry .contact-body{gap:24px}
+.audit-inquiry .contact-body h2{margin-bottom:0}
+.portfolio-footer{color:var(--ink-60)}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+.footer-links a{text-underline-offset:3px}
+.home .index-foot{color:var(--ink-60)}
+.home .index-foot a{text-underline-offset:3px}
+@media (max-width:860px){
+  .audit-page .audit-evidence-layout{grid-template-columns:1fr}
+  .audit-evidence{justify-self:start}
+}
+@media (max-width:540px){
+  .audit-inquiry{padding:28px 18px}
+  .audit-inquiry .sec-head{gap:12px;flex-wrap:wrap;font-size:11px}
+  .audit-page .links .btn{white-space:normal}
 }
