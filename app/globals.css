@@ -804,11 +804,13 @@
 .form-errors:focus,.form-done:focus{outline:2px solid var(--accent);outline-offset:4px}
 
 
-/* Editorial art sits alongside the process, separate from audit evidence. */
-.audit-process{align-items:center}
-.audit-process .ladder{margin-top:0}
-.audit-process-art{width:100%;max-width:520px;justify-self:center}
-.audit-process-art img{display:block;width:100%;height:auto;border-radius:var(--r-card)}
+/* Decorative editorial series, separate from project screenshots and evidence. */
+.editorial-split{align-items:center}
+.editorial-split > .ladder{margin-top:0}
+.editorial-art{width:100%;max-width:520px;justify-self:center}
+.editorial-art img{display:block;width:100%;height:auto;border-radius:var(--r-card)}
 @media (max-width:860px){
-  .audit-process-art{max-width:360px}
+  .editorial-art{max-width:360px}
 }
+
+.editorial-intro{margin-top:0}

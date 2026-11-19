@@ -103,3 +103,8 @@ portfolio's paper, ink, and violet palette. It is decorative (`alt=""`, hidden f
 accessibility tree), static, and separate from all audit evidence. Two WebP sizes are
 provided with responsive selection and intrinsic dimensions. The original generated PNG
 is retained outside the repository; only the optimized web assets ship.
+
+The same `EditorialArt` component also supplies a letterpress classification collage for
+Typeshelf and an abstract signals-to-clarity collage beside Meridian's lessons introduction.
+All three use static, decorative WebP assets with the same responsive sizing. The existing
+Typeshelf and Meridian prose, screenshots, and confidentiality caveats are preserved.
