@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 type Errors = Partial<Record<"name" | "email" | "message" | "form", string>>;
 
@@ -11,10 +11,23 @@ type Errors = Partial<Record<"name" | "email" | "message" | "form", string>>;
  * that only a script would fill, and the time between mount and submit. Neither
  * costs a real visitor anything.
  */
-export function ContactForm({ fallback, defaultSubject = "" }: { fallback: string; defaultSubject?: string }) {
+export function ContactForm({ fallback, defaultSubject = "", submitLabel = "Send it" }: {
+  fallback: string; defaultSubject?: string; submitLabel?: string;
+}) {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errors, setErrors] = useState<Errors>({});
   const mounted = useRef(0);
+  const form = useRef<HTMLFormElement>(null);
+  const feedback = useRef<HTMLDivElement>(null);
+  const confirmation = useRef<HTMLDivElement>(null);
+  const id = useId();
+  const fields = ["name", "email", "message"] as const;
+  const invalidFields = fields.filter((field) => errors[field]);
+
+  useEffect(() => {
+    if (state === "sent") confirmation.current?.focus();
+    else if (Object.keys(errors).length) feedback.current?.focus();
+  }, [state, errors]);
 
   useEffect(() => { mounted.current = Date.now(); }, []);
 
@@ -54,28 +67,42 @@ export function ContactForm({ fallback, defaultSubject = "" }: { fallback: strin
 
   if (state === "sent") {
     return (
-      <div className="form-done" role="status">
+      <div className="form-done" role="status" tabIndex={-1} ref={confirmation}>
         <p><b>Got it.</b> I'll get back to you, usually within a day or two.</p>
       </div>
     );
   }
 
   const err = (k: keyof Errors) =>
-    errors[k] ? <span className="field-err" id={`${k}-err`}>{errors[k]}</span> : null;
+    errors[k] ? <span className="field-err" id={`${id}-${k}-err`}>{errors[k]}</span> : null;
 
   return (
-    <form className="contact-form" onSubmit={onSubmit} noValidate>
+    <form className="contact-form" onSubmit={onSubmit} ref={form} noValidate>
+      {Object.keys(errors).length ? (
+        <div className="form-errors" role="alert" aria-atomic="true" tabIndex={-1}
+          ref={feedback} aria-labelledby={`${id}-error-title`}>
+          <h3 id={`${id}-error-title`}>{invalidFields.length
+            ? `Please check ${invalidFields.length === 1 ? "this field" : `these ${invalidFields.length} fields`}.`
+            : "Your message wasn't sent."}</h3>
+          {invalidFields.length ? <ul>{invalidFields.map((field) => (
+            <li key={field}><a href={`#${id}-${field}`} onClick={(event) => {
+              event.preventDefault();
+              (form.current?.elements.namedItem(field) as HTMLElement | null)?.focus();
+            }}>{errors[field]}</a></li>
+          ))}</ul> : <p>{errors.form} <a href={`mailto:${fallback}`}>Email {fallback}</a></p>}
+        </div>
+      ) : null}
       <div className="field-row">
         <label className="field">
           <span>Name</span>
-          <input name="name" type="text" autoComplete="name" required maxLength={100}
-                 aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-err" : undefined} />
+          <input id={`${id}-name`} name="name" type="text" autoComplete="name" required maxLength={100}
+                 aria-invalid={!!errors.name} aria-describedby={errors.name ? `${id}-name-err` : undefined} />
           {err("name")}
         </label>
         <label className="field">
           <span>Email</span>
-          <input name="email" type="email" autoComplete="email" required maxLength={200}
-                 aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-err" : undefined} />
+          <input id={`${id}-email`} name="email" type="email" autoComplete="email" required maxLength={200}
+                 aria-invalid={!!errors.email} aria-describedby={errors.email ? `${id}-email-err` : undefined} />
           {err("email")}
         </label>
       </div>
@@ -87,8 +114,8 @@ export function ContactForm({ fallback, defaultSubject = "" }: { fallback: strin
 
       <label className="field">
         <span>Message</span>
-        <textarea name="message" rows={5} required maxLength={4000}
-                  aria-invalid={!!errors.message} aria-describedby={errors.message ? "message-err" : undefined} />
+        <textarea id={`${id}-message`} name="message" rows={5} required maxLength={4000}
+                  aria-invalid={!!errors.message} aria-describedby={errors.message ? `${id}-message-err` : undefined} />
         {err("message")}
       </label>
 
@@ -99,10 +126,10 @@ export function ContactForm({ fallback, defaultSubject = "" }: { fallback: strin
 
       <div className="form-foot">
         <button className="btn primary" type="submit" data-cursor="Send" disabled={state === "sending"}>
-          {state === "sending" ? "Sending…" : "Send it"} <span className="arrow">→</span>
+          {state === "sending" ? "Sending…" : submitLabel} <span className="arrow" aria-hidden="true">→</span>
         </button>
         <span className="form-status" role="status" aria-live="polite">
-          {errors.form ?? (state === "sending" ? "Sending…" : "")}
+          {state === "sending" ? "Sending…" : ""}
         </span>
       </div>
     </form>

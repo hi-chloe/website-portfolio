@@ -62,3 +62,35 @@ motion; reveal failsafe; and page JavaScript errors.
 
 These are viewport emulations in desktop Chrome, rather than a new iPhone storefront audit.
 The unchanged dependency lockfile reports existing npm audit findings. No packages were added.
+
+## Portfolio polish
+
+- Chloe is explicitly the sole walkthrough tester. The recorded devices are desktop Chrome
+  and Chrome on iOS (iPhone), with a November 18, 2026 audit date and the recorded Medium /
+  White Gate / Signature Finish variant. Browser versions, iPhone model, and viewport sizes
+  were not recorded. Reproduction steps remain proposed controlled retests.
+- A concise result summary and `AuditCrop` appear near the top. AuditCrop uses CSS to show a
+  detail of unchanged Evidence C, with a separately rendered violet outline and marker.
+  The caption identifies the crop and annotation and links to the uncropped source. It is
+  also the worked sample near the service offer. No fabricated or retouched source image is used.
+- Section links are a named navigation landmark. Major findings have direct anchors;
+  supplementary findings have individual heading IDs. The previous `#findings` link remains
+  valid. Full captures have distinct, visible accessible link names.
+- The service H1 names Storefront Health Check. Pilot pricing appears once in the offer's
+  metadata; inquiry and submit labels name the audit. Shared form validation has a focused,
+  announced error summary, linked invalid fields, and focused success confirmation. The
+  homepage retains its default subject and submit label. The contact endpoint is unchanged.
+- Meridian stays first. Typeshelf links next to Fable. Home, Meridian, and Typeshelf own
+  canonical URLs and complete Open Graph/Twitter fields through `pageMetadata`.
+- Existing low-contrast secondary text now uses the existing `--ink-60` token. Decorative
+  light borders, brand fonts, and motion are retained. Contact counts inherit their light
+  text color so dark surfaces remain readable.
+
+Polish verification uses real empty-form validation (which cannot send mail) and controlled
+503 / 200 responses for delivery failure and success. It verifies summary focus, keyboard
+links to invalid fields, described-by associations, and confirmation focus. It also follows
+Home → Typeshelf → Fable → individual finding → services → inquiry, checks metadata on all
+five routes at 320/375/768/1440px, and verifies PDF byte equality, reduced motion, reading
+progress, and reveal behavior. Visual inspection covers the annotated crop and both pages
+at desktop and mobile widths. Actual email delivery and listening with a screen reader
+remain manual checks; DOM roles, live-region markup, and keyboard behavior are verified.

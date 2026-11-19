@@ -4,6 +4,7 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 import { Band, Meta } from "@/components/Band";
 import { ContactForm } from "@/components/ContactForm";
 import { CopyEmail } from "@/components/CopyEmail";
+import { AuditCrop } from "@/components/AuditCrop";
 import { PortfolioFooter } from "@/components/PortfolioFooter";
 
 const title = "Independent ecommerce audits · Chloe Polk";
@@ -24,7 +25,7 @@ export default function EcommerceAudits() {
       <main className="audit-page">
         <header className="band hero">
           <div className="eyebrow">Independent ecommerce audits</div>
-          <h1>A fresh look at the way your store works</h1>
+          <h1>Storefront Health Check</h1>
           <p className="lede">I help ecommerce brands find usability issues, quality problems, and
           shopping friction through structured storefront reviews. You get a clear record of what
           happened, why it matters, and what to investigate next.</p>
@@ -34,11 +35,24 @@ export default function EcommerceAudits() {
             { term: "Focus", detail: "One agreed shopping journey, desktop and mobile" },
             { term: "Deliverable", detail: "Prioritized findings and a concise report" },
           ]} />
-          <p className="prov">This is an introductory pilot offer. Scope, timing, and final price are
-          agreed before work begins. The starting price is being validated through the pilot.</p>
+          <p className="prov">Introductory pilot. We'll agree on the journey, timing, and final price
+          before work begins.</p>
           <div className="links">
-            <a className="btn primary" href="#inquire">Ask about a health check →</a>
+            <a className="btn primary" href="#inquire">Inquire about a Storefront Health Check →</a>
             <a className="btn" href="/fable-audit">See the Fable Pets audit →</a>
+          </div>
+          <div className="cols audit-sample">
+            <div className="body">
+              <div className="eyebrow">Sample finding · FBL-009</div>
+              <h2>A promotion covers a navigation link</h2>
+              <p>In my independent Fable Pets walkthrough, the “Want 10% off?” prompt covered part
+              of a mobile menu item. I assigned provisional Medium priority and recommended suppressing
+              promotions while navigation is open, then retesting at multiple mobile widths.</p>
+              <p>The screenshot supports the obstruction. Its frequency and technical cause still need
+              investigation. Fable Pets didn't commission the audit or implement recommendations through this work.</p>
+              <a href="/fable-audit#fbl-009">Inspect the full finding and evidence →</a>
+            </div>
+            <AuditCrop />
           </div>
         </header>
 
@@ -128,7 +142,7 @@ export default function EcommerceAudits() {
             <p className="lede">Share your store URL, the shopping path you'd like reviewed, and any
             timing constraints. I'll reply to confirm whether the health check is a fit. Sending an
             inquiry doesn't book or purchase an audit.</p>
-            <ContactForm fallback="chloe@hichloe.me" defaultSubject="Storefront Health Check inquiry" />
+            <ContactForm fallback="chloe@hichloe.me" defaultSubject="Storefront Health Check inquiry" submitLabel="Send audit inquiry" />
             <div className="contact-alt"><span>Or email me directly.</span><CopyEmail address="chloe@hichloe.me" /></div>
           </div>
         </section>

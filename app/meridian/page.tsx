@@ -1,18 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/pageMetadata";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/meridian", type: "article",
   title: "Meridian, hospitality operations · Chloe Polk",
-  description:
-    "An AI decision-support system for multi-location hospitality operations. Anonymized client work. Case study by Chloe Polk.",
-  openGraph: {
-    title: "Meridian, hospitality operations · Chloe Polk",
-    description:
-      "An AI decision-support system for multi-location hospitality operations. Anonymized client work. Case study by Chloe Polk.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "hi, i'm chloe" }],
-  },
-};
+  description: "An AI decision-support system for multi-location hospitality operations. Anonymized client work. Case study by Chloe Polk.",
+});
 
 export default function Meridian() {
   return (

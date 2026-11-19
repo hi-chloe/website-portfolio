@@ -1,17 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/pageMetadata";
 import { Nav } from "@/components/Nav";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { LiveEmbed } from "@/components/LiveEmbed";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/typeshelf", type: "article",
   title: "Typeshelf, a font viewer that never uploads your fonts · Chloe Polk",
   description: "Typeshelf is a client-side font viewer. Case study by Chloe Polk.",
-  openGraph: {
-    title: "Typeshelf, a font viewer that never uploads your fonts · Chloe Polk",
-    description: "Typeshelf is a client-side font viewer. Case study by Chloe Polk.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "hi, i'm chloe" }],
-  },
-};
+});
 
 export default function Typeshelf() {
   return (
@@ -269,7 +265,7 @@ export default function Typeshelf() {
 
   <div className="next">
     <span>Next</span>
-    <a href="/meridian" data-cursor="View">Meridian, hospitality operations &rarr;</a>
+    <a href="/fable-audit" data-cursor="View">Fable Pets, ecommerce UX &amp; quality audit &rarr;</a>
   </div>
       </main>
       <footer>
